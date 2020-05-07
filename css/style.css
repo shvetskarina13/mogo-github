@@ -134,11 +134,13 @@ footer {
 	width: 100%;
 	margin: 0 0 0;
 	padding: 0 0 0;
+    overflow: hidden;
 }
 main {
 	width: 100%;
 	display: block;
 	position: relative;
+    overflow: hidden;
 }
 .upper-text {
     text-transform: uppercase;
@@ -150,6 +152,7 @@ header {
     background-image: url(../images/bg-welcome-to-mogo.png);
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 .upper-text {
     text-transform: uppercase;
@@ -161,6 +164,9 @@ header .logo {
 header .logo a img {
     width: 86px;
     height: 23px;
+}
+header .menu {
+    display: none;
 }
 header nav {
 	float: right;
@@ -231,51 +237,133 @@ header a.learn-more-btn:hover {
     background-color: #fff;
     color: #fce38a;
 }
-header ul.tabs-list {
+header ul.bars-list {
     width: 100%;
 }
-header ul.tabs-list li {
+header ul.bar-list li {
     display: inline-block;
     width: 280px;
     margin-right: 22px;
     padding-bottom: 25px;
     cursor: pointer;
 }
-header ul.tabs-list li:last-child {
+header ul.bar-list li:last-child {
     margin-right: 0;
 }
-header ul.tabs-list li:hover p {
+header ul.bar-list li:hover p {
     color: #fff;
 }
-header ul.tabs-list li:hover:before {
-    background-color: #fff;
-}
-header ul.tabs-list li:hover:after {
-    content: '';
-    display: block;
-    width: 70px;
-    height: 3px;
-    margin-top: -46px;
-    background-color: #f38181;
-    transition: .3s ease;
-}
-header ul.tabs-list li:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #faf3dc;
+header ul.bar-list li .progressbar { 
+	height: 3px;
+	position: relative;
+	background: #faf3dc;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
     margin-bottom: 25px;
     transition: .3s ease;
 }
-header ul.tabs-list li p {
+header ul.bar-list li:hover .progressbar {
+    background: #fff;
+}
+header ul.bar-list li .progressbar > span {
+  display: none;
+  height: 100%;
+  background-color: #f38181;;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+}
+header ul.bar-list li:hover .progressbar > span {
+    display: block;
+    transition: .5s ease;
+}
+header ul.bar-list li p {
     font-size: 18px;
     color: #faf3dc;
     transition: .3s ease;
 }
-header ul.tabs-list li p span {
+header ul.bar-list li p span {
     font-weight: 700;
 }
+/*Drop menu*/
+.menu {
+  position: fixed;
+  left: 0;top: 0;
+  z-index: 99;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: 0.5s;
+  transform: translateX(-100%);
+  display: none;
+}
+.menu-active {
+  transform: translateX(0%);
+  background-color: #f38181;
+}
+.menu-list {
+  display: flex;
+  align-items: center;
+  padding: 70px 0;
+  flex-direction: column;
+}
+.menu-list a {
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 30px;
+  color: #fff;
+  transition: .3s ease;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 12px;
+}
+.menu-list a:hover {
+  color: #fce38a;
+  border-bottom: 3px solid #fce38a;
+}
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  position: absolute;
+  right: -60px;
+  top: 15px;
+}
+.content {
+  transition: 0.5s;
+  position: relative;
+  z-index: 0;
+}
+.content_active {
+  transform: translateX(30%);
+}
+.burger-line {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 25px;
+    height: 2px;
+    background-color: #eeb687;
+    transition: 0.5s;
+}
+.menu-active .burger-line {
+    background-color: #fce38a;
+}
+.second {
+    top: 10px;
+}
+.third {
+    top: 15px;
+}
+.content_active {
+    transform: translateX(30%);
+    transition: 0.5s;
+}
+#content {
+    transition: 0.5s;
+}
+/*Drop menu end*/
 .about-us-block {
     width: 100%;
     display: block;
@@ -370,4 +458,232 @@ header ul.tabs-list li p span {
     font-size: 65px;
     font-weight: 700;
     margin-bottom: 30px;
+}
+
+/*Responsive*/
+
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) { 
+    .wrapper {
+        width: 95%;
+    }
+    header h2 {
+        font-size: 55px;
+        padding: 110px 0 40px;
+    }
+    header h1 {
+        font-size: 110px;
+        width: 615px;
+    }
+    header h1:after {
+        margin: 45px auto 30px auto;
+    }
+    header ul.bar-list {
+        width: 940px;
+        margin: 0 auto;
+    }
+    header ul.bar-list li {
+        width: 215px;
+    }
+    header ul.bar-list li .progressbar {
+        height: 2px;
+    }
+    header ul.bar-list li p {
+        font-size: 14px;
+    }
+    .about-us-block .overlay-container {
+        width: 945px;
+        margin: 0 auto;
+    }
+    .about-us-block .overlay-item {
+        width: 295px;
+        height: 194px;
+    }
+    .about-us-block {
+        padding: 90px 0;
+    }
+    .about-us-block .overlay-item .overlay img {
+        width: 295px;
+        height: auto;
+    }
+    .counter-block .counter-container {
+        width: 940px;
+        margin: 0 auto;
+    }
+    .counter-block .counter-item {
+        width: 185px;
+    }
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+    header nav ul li {
+        font-size: 12px;
+    }
+    header h1 {
+        font-size: 100px;
+        width: 560px;
+    }
+    header h1:after {
+        height: 2px;
+    }
+    header a.learn-more-btn {
+        border: 2px solid #fff;
+        margin-bottom: 100px;
+    }
+    header ul.bar-list li {
+        width: 174px;
+        margin-right: 10px;
+    }
+    .about-us-block .overlay-item {
+        width: 227px;
+        height: 149px;
+    }
+    .about-us-block .overlay-item .overlay img {
+        width: 227px;
+    }
+    .counter-block .counter-item p.counter-number {
+        font-size: 50px;
+    }
+    .counter-block .counter-item p {
+        font-size: 10px;
+    }
+    .counter-block .counter-item {
+        padding: 30px 5px;
+    }
+    .counter-block .counter-container,
+    .about-us-block .overlay-container,
+    header ul.bar-list {
+        width: 740px;
+    }
+    .counter-block .counter-item {
+        width: 145px;
+    }
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+    header .menu {
+        display: block;
+    }
+    header .logo {
+        display: block;
+        margin: 0 auto;
+        width: 86px;
+    }
+    header h2 {
+        font-size: 32px;
+        padding: 80px 0 40px;
+    }
+    header h1 {
+        font-size: 55px;
+        width: 420px;
+    } 
+    header ul.bar-list {
+        width: 560px;
+    }
+    header ul.bar-list li {
+        width: 129px;
+    }
+    header ul.bar-list li .progressbar {
+        margin-bottom: 15px;
+    }
+    header ul.bar-list li p {
+        font-size: 12px;
+    }
+    .about-us-block {
+        padding: 70px 0;
+    }
+    p.section-heading-before {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    h3.section-heading {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    p.section-description {
+        width: 100%;
+    }
+    .about-us-block .overlay-item {
+        display: block;
+    }
+    .about-us-block .overlay-container {
+        width: 340px;
+    }
+    .about-us-block .overlay-item .overlay img {
+        width: 340px;
+    }
+    .about-us-block .overlay-item {
+        width: 340px;
+        height: 224px;
+        margin-bottom: 25px;
+    }
+    .about-us-block .overlay-item:last-child {
+        margin-bottom: 0;
+    }
+    .counter-block .counter-container {
+        width: 530px;
+    }
+    .counter-block .counter-item p.counter-number {
+        font-size: 32px;
+    }
+    .counter-block .counter-item p {
+        line-height: 1.3;
+    }
+    .counter-block .counter-item {
+        width: 103px;
+    }
+}
+
+/* 320px - 576px */
+@media screen and (max-width: 576px) {
+    .menu {
+        width: 50%;
+    }
+    .menu-list a {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    header h2 {
+        font-size: 22px;
+        padding: 60px 0 40px;
+    }
+    header h1 {
+        font-size: 45px;
+        width: 260px;
+    }
+    header ul.bar-list {
+        width: 300px;
+    }
+    header ul.bar-list li p {
+        width: 25px;
+    }
+    header ul.bar-list li {
+        width: 64px;
+    }
+    .about-us-block .overlay-container {
+        width: 280px;
+    }
+    .about-us-block .overlay-item .overlay img {
+        width: 280px;
+    }
+    .about-us-block .overlay-item {
+        width: 280px;
+        height: 184px;
+        margin-bottom: 25px;
+    }
+    .counter-block .counter-container {
+        width: 320px;
+    }
+    .counter-block .counter-item p.counter-number {
+        font-size: 24px;
+    }
+    .counter-block .counter-item {
+        padding: 20px 0;
+        width: 61px;
+    }
 }
