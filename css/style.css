@@ -450,7 +450,85 @@ header ul.bar-list li p span {
     font-weight: 700;
     margin-bottom: 30px;
 }
-
+.services-block {
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 110px 0 120px;;
+}
+.services-block .top-row {
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 65px;
+}
+.services-block .bottom-row {
+    margin-top: 50px;
+}
+.services-block .row-item {
+    display: inline-block;
+    margin-right: 60px;
+}
+.services-block .row-item:first-child {
+    margin-left: 30px;
+}
+.services-block .row-item:last-child {
+    margin-right: 0;
+}
+.services-block .row-item img {
+    position: absolute;
+    width: 32px;
+    height: auto;
+}
+.services-block .row-item .right-text {
+    display: inline-block;
+    margin-left: 64px;
+}
+.services-block .row-item h4.item-title {
+    font-weight: 400;
+    color: #333333;
+}
+.services-block .row-item p.item-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #999999;
+    line-height: 1.7;
+    padding: 20px 0 53px;
+    width: 270px;
+}
+.unique-design-block {
+    width: 100%;
+    display: block;
+    position: relative;
+    background-image: url(../images/bg-unique-design.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px; 
+}
+.unique-design-block .devices {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.unique-design-block .devices .ipad {
+    display: block;
+    width: 570px;
+    height: auto;
+    margin: 0 auto;
+}
+.unique-design-block .devices .iphone {
+    width: 274px;
+    height: auto;
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    margin-left: 140px;
+}
+.we-do-block {
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 110px 0 120px; 
+}
 /*Responsive*/
 
 /* 992px - 1200px */
