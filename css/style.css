@@ -284,7 +284,7 @@ header ul.bar-list li p {
 header ul.bar-list li p span {
     font-weight: 700;
 }
-/*Drop menu*/
+/*drop-menu*/
 .menu {
   position: fixed;
   left: 0;top: 0;
@@ -298,6 +298,7 @@ header ul.bar-list li p span {
   transition: 0.5s;
   transform: translateX(-100%);
   display: none;
+  background-color: #f38181;
 }
 .menu-active {
   transform: translateX(0%);
@@ -318,6 +319,12 @@ header ul.bar-list li p span {
   border-bottom: 3px solid transparent;
   padding-bottom: 12px;
 }
+.menu-list a:hover:nth-child(6) {
+  border-bottom: 3px solid transparent;
+}
+.menu-list a:hover:last-child {
+  border-bottom: 3px solid transparent;
+}
 .menu-list a:hover {
   color: #fce38a;
   border-bottom: 3px solid #fce38a;
@@ -327,25 +334,17 @@ header ul.bar-list li p span {
   height: 30px;
   background-color: transparent;
   position: absolute;
-  right: -60px;
+  right: -55px;
   top: 15px;
 }
-.content {
-  transition: 0.5s;
-  position: relative;
-  z-index: 0;
-}
-.content_active {
-  transform: translateX(30%);
-}
 .burger-line {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    width: 25px;
-    height: 2px;
-    background-color: #eeb687;
-    transition: 0.5s;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 25px;
+  height: 2px;
+  background-color: #eeb687;
+  transition: 0.5s;
 }
 .menu-active .burger-line {
     background-color: #fce38a;
@@ -356,14 +355,7 @@ header ul.bar-list li p span {
 .third {
     top: 15px;
 }
-.content_active {
-    transform: translateX(30%);
-    transition: 0.5s;
-}
-#content {
-    transition: 0.5s;
-}
-/*Drop menu end*/
+/*drop-menu end*/
 .about-us-block {
     width: 100%;
     display: block;
@@ -442,7 +434,6 @@ header ul.bar-list li p span {
     background-color: #95e1d3;
 }
 .counter-block .counter-item {
-    display: inline-block;
     width: 236px;
     padding: 80px 5px;
     border-right: 1px solid #b5eae0;
@@ -510,9 +501,6 @@ header ul.bar-list li p span {
         width: 940px;
         margin: 0 auto;
     }
-    .counter-block .counter-item {
-        width: 185px;
-    }
 }
 
 /* 768px - 992px */
@@ -551,13 +539,9 @@ header ul.bar-list li p span {
     .counter-block .counter-item {
         padding: 30px 5px;
     }
-    .counter-block .counter-container,
     .about-us-block .overlay-container,
     header ul.bar-list {
         width: 740px;
-    }
-    .counter-block .counter-item {
-        width: 145px;
     }
 }
 
@@ -625,17 +609,11 @@ header ul.bar-list li p span {
     .about-us-block .overlay-item:last-child {
         margin-bottom: 0;
     }
-    .counter-block .counter-container {
-        width: 530px;
-    }
     .counter-block .counter-item p.counter-number {
         font-size: 32px;
     }
     .counter-block .counter-item p {
         line-height: 1.3;
-    }
-    .counter-block .counter-item {
-        width: 103px;
     }
 }
 
@@ -676,14 +654,12 @@ header ul.bar-list li p span {
         height: 184px;
         margin-bottom: 25px;
     }
-    .counter-block .counter-container {
-        width: 320px;
-    }
     .counter-block .counter-item p.counter-number {
         font-size: 24px;
+        margin-bottom: 15px;
     }
     .counter-block .counter-item {
-        padding: 20px 0;
-        width: 61px;
+        padding: 15px 5px;
+        font-size: 8px;
     }
 }
