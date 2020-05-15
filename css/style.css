@@ -304,6 +304,19 @@ header ul.bar-list li p span {
   transform: translateX(0%);
   background-color: #f38181;
 }
+.menu-active .menu-btn {
+   right: 5px;
+}
+.menu-active .menu-btn .first {
+    transform: rotate(45deg);
+}
+.menu-active .menu-btn .second{
+    transform: rotate(-45deg);
+    top: 5px;
+}
+.menu-active .menu-btn .third {
+    display: none;
+}
 .menu-list {
   display: flex;
   align-items: center;
@@ -336,6 +349,7 @@ header ul.bar-list li p span {
   position: absolute;
   right: -55px;
   top: 15px;
+  transition: 0.5s;
 }
 .burger-line {
   position: absolute;
@@ -800,13 +814,19 @@ header ul.bar-list li p span {
         margin-top: 20px;
         font-size: 12px;
     }
+    h3.section-heading:after {
+        margin-top: 10px;
+    }
     header h2 {
         font-size: 22px;
-        padding: 60px 0 40px;
+        padding: 40px 0 40px;
     }
     header h1 {
         font-size: 45px;
         width: 260px;
+    }
+    header a.learn-more-btn {
+        margin-bottom: 70px;
     }
     header ul.bar-list {
         width: 300px;
@@ -816,6 +836,12 @@ header ul.bar-list li p span {
     }
     header ul.bar-list li {
         width: 64px;
+    }
+    .unique-design-block {
+        padding-top: 30px;
+    }
+    .about-us-block, .services-block, .we-do-block {
+        padding: 40px 0;
     }
     .about-us-block .overlay-container {
         width: 280px;
@@ -835,6 +861,9 @@ header ul.bar-list li p span {
     .counter-block .counter-item {
         padding: 15px 5px;
         font-size: 8px;
+    }
+    .services-block .top-row {
+        margin-top: 30px;
     }
     .services-block .row-item {
         width: 300px;
