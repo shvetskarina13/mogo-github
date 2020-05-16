@@ -582,11 +582,11 @@ header ul.bar-list li p span {
     right: 15px;
     margin-top: -9px;
 }
-li {
+.accordion-menu li {
     margin-top: 10px;
     border: 1px solid #e5e5e5;
 }
-li:first-child {
+.accordion-menu li:first-child {
     margin-top: 0;
 }
 .submenuItems {
