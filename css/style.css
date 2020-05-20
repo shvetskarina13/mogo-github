@@ -152,6 +152,7 @@ header {
     background-image: url(../images/bg-welcome-to-mogo.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     overflow: hidden;
 }
 .upper-text {
@@ -497,7 +498,6 @@ header ul.bar-list li p span {
     margin-left: 64px;
 }
 .services-block .row-item h4.item-title {
-    font-weight: 400;
     color: #333333;
 }
 .services-block .top-row .row-item p.item-text {
