@@ -1460,19 +1460,19 @@ header ul.bar-list li p span {
         margin: 0 auto;
     }
     .article-container {
-        width: 750px;
+        width: 720px;
         margin: 0 auto;
     }
     .article-container article img {
-        width: 230px;
+        width: 220px;
         height: auto;
     }
     .blog-block article p.article-text {
-        width: 230px;
+        width: 220px;
     }
     .blog-block article h3 {
-        width: 230px;
-        font-size: 12px;
+        width: 220px;
+        font-size: 11px;
     }
 }
 /* 576px - 768px */
@@ -1863,6 +1863,12 @@ header ul.bar-list li p span {
     .people-say-block img {
         width: 90px;
         height: auto;
+    }
+    .people-say-block p.position {
+        padding: 10px 0 15px;
+    }
+    .people-say-block p.text-description {
+        padding: 15px 0;
     }
     .blog-block article {
         width: 280px;
