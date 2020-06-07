@@ -749,6 +749,7 @@ header ul.bar-list li p span {
 }
 .our-team-block .overlay-item p.name {
     padding: 30px 0 15px;
+    font-weight: 700;
 }
 .our-team-block .overlay-item p.position {
     font-family: 'Roboto', sans-serif;
