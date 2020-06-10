@@ -18,6 +18,9 @@ $('.reviews-slider').slick({
     waitForAnimate: false,  
     responsive: [
     {
+      breakpoint: 1200,
+    },
+    {
       breakpoint: 992,
     },
     {
