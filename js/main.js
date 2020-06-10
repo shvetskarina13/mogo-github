@@ -18,11 +18,23 @@ $('.reviews-slider').slick({
     waitForAnimate: false,  
     responsive: [
     {
+      breakpoint: 992,
+    },
+    {
+      breakpoint: 768,
+    },
+    {
       breakpoint: 576,
       settings: {
         arrows: false
       }
-    }
+    },
+    {
+      breakpoint: 320,
+      settings: {
+        arrows: false
+      }
+    }    
   ]
 });
 
