@@ -10,6 +10,7 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
+  <script type="text/javascript" src="js/jquery.accordion.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <title>Mogo</title>
 </head>
@@ -639,16 +640,22 @@
 	       </div>
 	       </div>
 	    </section>
-	    <section class="map-block">
-	       <div class="wrapper">
-	           <h3 class="upper-text">
+	    <section class="map-block" id="contactid">
+	           <div class="accordion map">
 	               <img src="images/map-mark.png" alt="mark">
-	               Open map
-	           </h3>
-	       </div>
+                   <h4 class="upper-text open-map">
+	                   Open map
+	               </h4> 
+	               <h4 class="upper-text close-map">
+	                   close map
+	               </h4> 
+	           </div>
+	           <div class="content-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.9046051131763!2d36.234321315135205!3d49.99439792800189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a0efb04d1f41%3A0xe32579cac9827c50!2z0KLQtdCw0YLRgNCw0LvRjNC90YvQuSDQv9C10YAuLCA0LCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1591879432862!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
 	    </section>
 	    <section class="mogo-inst-block">
-	       <div class="wrapper flex-box">
+	        <div class="wrapper flex-box">
 	           <div class="inst-block-item mogo">
 	               <h2>MoGo</h2>
 	               <p class="mogo-text">
@@ -675,24 +682,41 @@
 	           </div>
 	           <div class="inst-block-item blogs">
 	               <h3 class="blogs-title upper-text">Blogs</h3>
-	               <article>
+	               <article class="clearfix">
+	                   <a href="#"><img src="images/blogs-img-1.png" alt="blogs-img"></a>
+	                   <h4 class="article-title upper-text">
+	                       <a href="#">Lorem ipsum dolor sit amet,  consectetur adipiscing</a>
+	                   </h4>
+	                   <p class="date">Jan 9, 2016</p>
 	               </article>
-	               <article>
+	               <article class="clearfix">
+	                   <a href="#"><img src="images/blogs-img-2.png" alt="blogs-img"></a>
+	                   <h4 class="article-title upper-text">
+	                       <a href="#">Consectetur adipiscing elit,  sed do eiusmod tempor</a>
+	                   </h4>
+	                   <p class="date">Jan 9, 2016</p>
 	               </article>
-	               <article>
+	               <article class="clearfix">
+	                   <a href="#"><img src="images/blogs-img-3.png" alt="blogs-img"></a>
+	                   <h4 class="article-title upper-text">
+	                       <a href="#">sed do eiusmod tempor  incididunt ut labore</a>
+	                   </h4>
+	                   <p class="date">Jan 9, 2016</p>
 	               </article>
 	           </div>
 	           <div class="inst-block-item instagram">
 	               <h3 class="blogs-title upper-text">Instagram</h3>
-	               <img src="images/inst-ph-1.png" alt="inst-photo">
-	               <img src="images/inst-ph-2.png" alt="inst-photo">
-	               <img src="images/inst-ph-3.png" alt="inst-photo">
-	               <img src="images/inst-ph-4.png" alt="inst-photo">
-	               <img src="images/inst-ph-5.png" alt="inst-photo">
-	               <img src="images/inst-ph-6.png" alt="inst-photo">
-	               <img src="images/inst-ph-7.png" alt="inst-photo">
-	               <img src="images/inst-ph-8.png" alt="inst-photo">
-	               <img src="images/inst-ph-9.png" alt="inst-photo">
+	               <div class="img-box">
+	                   <img src="images/inst-ph-1.png" alt="inst-photo">
+	                   <img src="images/inst-ph-2.png" alt="inst-photo">
+	                   <img src="images/inst-ph-3.png" alt="inst-photo">
+	                   <img src="images/inst-ph-4.png" alt="inst-photo">
+	                   <img src="images/inst-ph-5.png" alt="inst-photo">
+	                   <img src="images/inst-ph-6.png" alt="inst-photo">
+	                   <img src="images/inst-ph-7.png" alt="inst-photo">
+	                   <img src="images/inst-ph-8.png" alt="inst-photo">
+	                   <img src="images/inst-ph-9.png" alt="inst-photo">
+	               </div>
 	               <a href="#" class="view-more">View more photos</a>
 	           </div>
 	       </div>
@@ -700,8 +724,8 @@
 	</main>
 	<footer>
         <div class="wrapper">
-            <p>© 2016 MoGo free PSD template by <span>Laaqiq</span></p>
-        </div>
+            <p>© 2016 MoGo free PSD template by <a href="#">Laaqiq</a></p>
+        </div> 
 	</footer>
 </body>
 </html>

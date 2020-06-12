@@ -6,6 +6,13 @@ $('.menu-btn').on('click', function(e) {
     $('.menu').toggleClass('menu-active');
 })
 
+// Карта
+$('.map').on('click', function(e) {
+    e.preventDefault();
+    $('.content-map').toggleClass('map-active');
+    $('.accordion').toggleClass('accordion-open');
+})   
+    
 //slick-slider
 $('.reviews-slider').slick({
     dots: false,
