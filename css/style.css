@@ -1196,20 +1196,39 @@ iframe {
     font-weight: 700;
 }
 .mogo-inst-block .mogo .social-netw p.follow-us {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
     font-style: italic;
     font-weight: 300;
-    display: inline-block;
     margin-right: 20px;
+    margin-bottom: -19px;
+    color: #999;
 }
 .mogo-inst-block .mogo .social-netw {
     padding: 17px 0 40px;
     border-top: 1px solid #e5e5e5;
+    position: relative;
 }
 .mogo-inst-block .mogo .social-netw a {
     margin-right: 15px;
+    transition: all .3s;
+    position: relative;
+}
+.mogo-inst-block .mogo .social-netw .socials {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    margin-left: 90px;
+}
+.mogo-inst-block .mogo .social-netw a img {
+    margin-top: -9px;
 }
 .mogo-inst-block .mogo .social-netw a:last-child {
     margin-right: 0;
+}
+.mogo-inst-block .mogo .social-netw a:hover {
+    border: 1px solid #f38181;
+    padding: 10px;
 }
 .mogo-inst-block .mogo form input {
     font-family: 'Roboto', sans-serif;
@@ -1283,7 +1302,7 @@ iframe {
     width: 88px;
     height: auto;
 }
-.mogo-inst-block .instagram a {
+.mogo-inst-block .instagram a.view-more {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     display: block;
@@ -1555,8 +1574,11 @@ footer p a:hover {
     .mogo-inst-block article h4 {
         padding-top: 0;
     }
-    .mogo-inst-block .instagram .img-box img:last-child {
+    .mogo-inst-block .instagram .img-box a:last-child {
         display: none;
+    }
+    .mogo-inst-block .mogo .social-netw p.follow-us {
+        margin-top: -10px;
     }
 }
 /* 768px - 992px */
@@ -1769,7 +1791,7 @@ footer p a:hover {
     .instagram {
         margin: 0 auto;
     }
-    .mogo-inst-block .instagram .img-box img:last-child {
+    .mogo-inst-block .instagram .img-box a:last-child {
         display: inline-block;
     }
     .mogo-inst-block .instagram {
@@ -2214,5 +2236,11 @@ footer p a:hover {
     }
     .mogo-inst-block h3 {
         margin-bottom: 30px;
+    }
+    .mogo-inst-block .mogo .social-netw a:first-child {
+            margin-left: 0;
+    }
+    .mogo-inst-block .mogo .social-netw p.follow-us {
+        position: static;
     }
 }
