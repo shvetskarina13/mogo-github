@@ -35,15 +35,9 @@ $('.reviews-slider').slick({
     },
     {
       breakpoint: 576,
-      settings: {
-        arrows: false
-      }
     },
     {
       breakpoint: 320,
-      settings: {
-        arrows: false
-      }
     }    
   ]
 });

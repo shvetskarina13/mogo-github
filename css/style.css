@@ -833,12 +833,15 @@ header ul.bar-list li p span {
 .partners-block img {
     width: 110px;
     height: auto;
-    margin-right: 99px;
+    cursor: pointer;
 }
-.partners-block img:first-child {
+.partners-block a {
+   margin-right: 99px; 
+}
+.partners-block a:first-child {
     margin-left: 10px;
 }
-.partners-block img:last-child {
+.partners-block a:last-child {
     margin-right: 10px;
 }
 .our-works {
@@ -1448,7 +1451,7 @@ footer p a:hover {
     .our-team-block .overlay-item p.position {
         font-size: 13px;
     }
-    .partners-block img {
+    .partners-block a {
         margin-right: 48px;
     }
     .allimage .imagehover h4 {
@@ -1692,6 +1695,8 @@ footer p a:hover {
     }
     .partners-block img {
         width: 100px;
+    }
+    .partners-block a {
         margin-right: 18px;
     }
     .container {
@@ -1918,16 +1923,16 @@ footer p a:hover {
     .partners-block img {
         width: 150px;
     }
-    .partners-block img:nth-child(odd) {
+    .partners-block a:nth-child(odd) {
         margin-right: 75px;
     }
-    .partners-block img:nth-child(even) {
+    .partners-block a:nth-child(even) {
         margin-right: 0;
     }
-    .partners-block img:first-child {
+    .partners-block a:first-child {
         margin-left: 0;
     }
-    .partners-block img:last-child {
+    .partners-block a:last-child {
         margin-right: 0;
     }
     .container {
@@ -2113,7 +2118,7 @@ footer p a:hover {
     .partners-block img {
         width: 115px;
     }
-    .partners-block img:nth-child(odd) {
+    .partners-block a:nth-child(odd) {
         margin-right: 25px;
     }
     .container {
@@ -2143,8 +2148,14 @@ footer p a:hover {
         padding: 0;
     }
     .reviews-slider-img-block .slider-item {
-        width: 300px;
-        height: 120px;
+        width: 240px;
+        height: 160px;
+    }
+    .reviews-slider-block .slider-item {
+        width: 220px;
+    }
+    .slick-list {
+        height: 160px;
     }
     .people-say-block .people-say-item {
         width: 300px;
