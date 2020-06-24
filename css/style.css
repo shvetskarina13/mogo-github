@@ -1580,6 +1580,9 @@ footer p a:hover {
     .mogo-inst-block .mogo .social-netw p.follow-us {
         margin-top: -10px;
     }
+    .mogo-inst-block .mogo .social-netw a img {
+        margin-top: 2px;
+    }
 }
 /* 768px - 992px */
 @media screen and (max-width: 992px) {
@@ -2242,5 +2245,10 @@ footer p a:hover {
     }
     .mogo-inst-block .mogo .social-netw p.follow-us {
         position: static;
+    }
+    .mogo-inst-block .mogo .social-netw .socials {
+        position: static;
+        margin-top: 15px;
+        margin-left: 0;
     }
 }
