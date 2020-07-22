@@ -6,6 +6,13 @@ $('.menu-btn').on('click', function(e) {
     $('.menu').toggleClass('menu-active');
 })
 
+// Карта
+$('.map').on('click', function(e) {
+    e.preventDefault();
+    $('.content-map').toggleClass('map-active');
+    $('.accordion').toggleClass('accordion-open');
+})   
+    
 //slick-slider
 $('.reviews-slider').slick({
     dots: false,
@@ -13,16 +20,25 @@ $('.reviews-slider').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     waitForAnimate: false,  
     responsive: [
     {
+      breakpoint: 1200,
+    },
+    {
+      breakpoint: 992,
+    },
+    {
+      breakpoint: 768,
+    },
+    {
       breakpoint: 576,
-      settings: {
-        arrows: false
-      }
-    }
+    },
+    {
+      breakpoint: 320,
+    }    
   ]
 });
 
